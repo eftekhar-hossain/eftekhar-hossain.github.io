@@ -26,7 +26,7 @@ body.sticky-bottom-footer { padding-bottom: 0; }
 /******************************************************************************* Styles for the base elements of the theme. *****************************************************************************/
 p, h1, h2, h3, h4, h5, h6, em, div, span, strong { color: var(--global-text-color); }
 
-a, table.table a { color:brown; }
+a, table.table a { color:var(--global-theme-color); }
 a:hover, table.table a:hover { color: black; text-decoration: underline; }
 a:hover:after, table.table a:hover:after { width: 100%; }
 
