@@ -55,6 +55,23 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 .navbar.navbar-light .contact-icon { font-size: 2rem; }
 .navbar.navbar-light .contact-icon a:hover { color: var(--global-hover-color); }
 
+
+.navbar.navbar-light .navbar-brand.social {
+    padding-bottom: 0;
+    padding-top: 0;
+    font-size: 1.7rem
+}
+
+.navbar.navbar-light .navbar-brand.social a i::before {
+    color: var(--global-text-color);
+    transition-property: all .2s ease-in-out
+}
+
+.navbar.navbar-light .navbar-brand.social a:hover i::before {
+    color: var(--global-theme-color)
+}
+
+
 .navbar-toggler .icon-bar { display: block; width: 22px; height: 2px; background-color: var(--global-icon-color); border-radius: 1px; margin-bottom: 4px; transition: all 0.2s; }
 .navbar-toggler .top-bar { transform: rotate(45deg); transform-origin: 10% 10%; }
 .navbar-toggler .middle-bar { opacity: 0; }
