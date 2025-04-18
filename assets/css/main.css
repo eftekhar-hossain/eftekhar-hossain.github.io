@@ -119,6 +119,57 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 .projects .grid-item a:hover { color: var(--global-theme-color); }
 .projects .card img { width: 100%; }
 
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  margin-top: 2rem;
+}
+
+.edu-entry {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.edu-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.edu-details h3 {
+  margin: 0;
+  color: #6a1b9a;
+  font-size: 1.2rem;
+}
+
+.edu-details .position {
+  margin: 0.2rem 0;
+  font-style: italic;
+}
+
+.edu-details .date {
+  font-weight: normal;
+  color: #555;
+}
+
+.edu-details a {
+  color: #00a1e0;
+  text-decoration: none;
+}
+
+.edu-details a:hover {
+  text-decoration: underline;
+}
+
+.edu-details p {
+  margin: 0.3rem 0;
+}
+
+
 .publications { margin-top: 2rem; }
 .publications h1 { color: var(--global-theme-color); font-size: 2rem; text-align: center; margin-top: 1em; margin-bottom: 1em; }
 .publications h2 { margin-bottom: 1rem; }
