@@ -157,8 +157,8 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 }
 
 .edu-details a {
-  color: #dc3545ad;
-  text-decoration: none;
+  color: #6c757d;
+  text-decoration: underline;
 }
 
 .edu-details a:hover {
