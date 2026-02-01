@@ -1,6 +1,6 @@
 /******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. *****************************************************************************/
 /******************************************************************************* Themes *****************************************************************************/
-:root { --global-bg-color: #ffffff; --global-text-color: #000000; --global-theme-color:#6f42c1; --global-hover-color: #007bff; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
+:root { --global-bg-color: #ffffff; --global-text-color: #000000; --global-theme-color:rgba(47, 58, 140, 0.85); --global-hover-color: #007bff; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
 :root .fa-sun { display: none; }
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
 
@@ -9,7 +9,7 @@
 /*html[data-theme='dark'] .fa-moon { display: none; }*/
 
 /****************************************************************************** Content *****************************************************************************/
-body { font-family: "Roboto Slab"; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
+body { font-family: "Trebuchet MS, sans-serif"; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
 
 body.fixed-top-nav { padding-top: 56px; }
 
