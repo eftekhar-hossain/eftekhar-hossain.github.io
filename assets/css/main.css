@@ -11,8 +11,8 @@
 /****************************************************************************** Content *****************************************************************************/
 body { font-family: "Trebuchet MS", sans-serif; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
 
-body a {
-    color: #007bff;
+.content a {
+    color:rgba(47, 58, 140, 0.85);
     text-decoration: none;
     cursor: pointer;
     font-weight: 900;
