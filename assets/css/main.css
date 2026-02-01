@@ -11,6 +11,16 @@
 /****************************************************************************** Content *****************************************************************************/
 body { font-family: "Trebuchet MS", sans-serif; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
 
+body a {
+    color: #007bff;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 900;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+
 body.fixed-top-nav { padding-top: 56px; }
 
 body.sticky-bottom-footer { padding-bottom: 0; }
