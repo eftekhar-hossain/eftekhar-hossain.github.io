@@ -20,6 +20,14 @@ p a {
     transition: all 0.2s ease-in-out;
 }
 
+/***** For text bold with color *****/
+
+.highlight {
+  color: rgba(47, 58, 140, 0.85);
+  font-weight: 700;
+}
+
+
 
 body.fixed-top-nav { padding-top: 56px; }
 
