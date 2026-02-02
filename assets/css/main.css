@@ -27,6 +27,19 @@ p a {
   font-weight: 700;
 }
 
+/***** For news block date design *****/
+.date-pill {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background-color: #e6e0ff;
+  color: #1f1f1f;
+  font-weight: 700;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+
 
 
 body.fixed-top-nav { padding-top: 56px; }
@@ -99,7 +112,7 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 .navbar-toggler.collapsed .middle-bar { opacity: 1; }
 .navbar-toggler.collapsed .bottom-bar { transform: rotate(0); }
 
-.news table td { font-size: 1rem; color: var(--global-text-color); }
+.news table td { font-size: 1rem; color: var(--global-text-color); padding-bottom: 0.2rem; vertical-align: middle; }
 
 .news table th { width: 130px; color: #800080; font-weight: bold; }
 
