@@ -112,7 +112,7 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 .navbar-toggler.collapsed .middle-bar { opacity: 1; }
 .navbar-toggler.collapsed .bottom-bar { transform: rotate(0); }
 
-.news table td { font-size: 1rem; color: var(--global-text-color); padding-bottom: 0.2rem; vertical-align: middle; }
+.news table td { font-size: 1rem; color: var(--global-text-color); padding-top: 0rem; padding-bottom: 0.2rem; vertical-align: middle; }
 
 .news table th { width: 130px; color: #800080; font-weight: bold; }
 
