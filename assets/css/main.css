@@ -1,5 +1,6 @@
 /******************************************************************************* Variables used throughout the theme. To adjust anything, simply edit the variables below and rebuild the theme. *****************************************************************************/
 /******************************************************************************* Themes *****************************************************************************/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700&display=swap");
 :root { --global-bg-color: #ffffff; --global-text-color: #000000; --global-theme-color:rgba(47, 58, 140, 0.85); --global-hover-color: #007bff; --global-footer-bg-color: #424242; --global-footer-text-color: #e8e8e8; --global-footer-link-color: #ffffff; --global-icon-color: #424242; }
 :root .fa-sun { display: none; }
 :root .fa-moon { padding-left: 10px; padding-top: 12px; display: block; }
@@ -9,7 +10,7 @@
 /*html[data-theme='dark'] .fa-moon { display: none; }*/
 
 /****************************************************************************** Content *****************************************************************************/
-body { font-family: "Trebuchet MS", sans-serif; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
+body { font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding-bottom: 70px; color: var(--global-text-color); background-color: var(--global-bg-color); }
 
 p a {
     color:rgba(47, 58, 140, 0.85);
@@ -80,9 +81,21 @@ a:hover:after, table.table a:hover:after { width: 100%; }
 .navbar.navbar-light a:hover { text-decoration: none; }
 .navbar.navbar-light .navbar-brand { color: var(--global-text-color); }
 .navbar.navbar-light .navbar-nav .nav-item .nav-link { color: var(--global-text-color); }
-.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover { color: var(--global-hover-color); }
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  background: #ecf9f6 !important;
+  color: #0b5f52 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link { background-color: inherit; font-weight: bolder; color: var(--global-theme-color); }
-.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover { color: var(--global-hover-color); }
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
+  background: #ecf9f6 !important;
+  color: #0b5f52 !important;
+  text-decoration: underline !important;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
 .navbar.navbar-light .contact-icon { font-size: 2rem; }
 .navbar.navbar-light .contact-icon a:hover { color: var(--global-hover-color); }
 
@@ -155,7 +168,7 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: inherit;
   margin-top: 2rem;
 }
 
@@ -229,3 +242,1678 @@ footer.sticky-bottom { border-top: 1px solid #e8e8e8; padding-top: 40px; padding
 code { color: var(--global-theme-color); }
 
 html.transition, html.transition *, html.transition *:before, html.transition *:after { transition: all 750ms !important; transition-delay: 0 !important; }
+
+/* ==========================================================================
+   Polish pass (structure preserved)
+   ========================================================================== */
+
+:root {
+  --global-bg-color: #f7f8fb;
+  --global-text-color: #1a2233;
+  --global-theme-color: #2a3e8d;
+  --global-hover-color: #1f5fbf;
+  --global-icon-color: #374056;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.7;
+  background: linear-gradient(180deg, #f7f8fb 0%, #fbfcff 100%);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: inherit;
+  letter-spacing: 0.01em;
+}
+
+.container { max-width: 880px; }
+
+.navbar {
+  border-bottom: 1px solid #dfe3ee;
+  background-color: rgba(247, 248, 251, 0.95);
+  backdrop-filter: blur(6px);
+}
+
+.navbar.navbar-light .navbar-nav .nav-item .nav-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  color: var(--global-theme-color);
+}
+
+.post {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.post + .post { margin-top: 2rem; }
+
+.post-header {
+  border-bottom: 1px solid #e4e8f2;
+  padding-bottom: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.post-title {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+  margin-bottom: 0.2rem;
+}
+
+.highlight {
+  color: #253b88;
+  font-weight: 700;
+}
+
+.profile img {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(30, 44, 86, 0.15);
+}
+
+.news table th {
+  width: 120px;
+  color: #4a5b95;
+  font-weight: 700;
+}
+
+.news table td {
+  font-size: 0.95rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.45rem;
+}
+
+.date-pill {
+  background-color: #e9eeff;
+  color: #2c3969;
+  border: 1px solid #d0d9fa;
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+}
+
+.publications h2.year {
+  color: #6070a7;
+  border-top-color: #dfe4f1;
+  margin-bottom: -1.25rem;
+}
+
+.publications ol.bibliography li {
+  margin-bottom: 0.95rem;
+  border: none;
+  border-bottom: 1px solid #e2e7f2;
+  border-radius: 0;
+  padding: 0 0 0.95rem 0;
+  background: transparent;
+}
+
+.publications ol.bibliography li:last-child {
+  border-bottom: none;
+}
+
+.publications ol.bibliography li .title {
+  font-size: 1.03rem;
+  line-height: 1.4;
+}
+
+.publications ol.bibliography li .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.publications ol.bibliography li .periodical {
+  color: #626d89;
+  font-size: 0.9rem;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  border-radius: 999px;
+  font-size: 0.72rem;
+  padding: 0.22rem 0.7rem;
+  letter-spacing: 0.04em;
+}
+
+.education-section { gap: 1.5rem; }
+
+.edu-entry {
+  gap: 1.4rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed #dfe4ef;
+}
+
+.edu-entry:last-child { border-bottom: none; padding-bottom: 0; }
+
+.edu-logo {
+  width: 62px;
+  height: 62px;
+  border-radius: 10px;
+  padding: 6px;
+  background: #ffffff;
+  border: 1px solid #e6e9f2;
+}
+
+.edu-details h3 {
+  color: #2f3f7f;
+  font-size: 1.06rem;
+}
+
+@media (max-width: 768px) {
+  .edu-entry { gap: 0.85rem; }
+  .edu-logo { width: 54px; height: 54px; }
+}
+
+/* ==========================================================================
+   Layout correction: tighter width + cleaner flow
+   ========================================================================== */
+
+body {
+  background: #f8f9fc;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.post {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-header {
+  margin-bottom: 0.85rem;
+}
+
+.post-title {
+  max-width: 36ch;
+}
+
+.news {
+  height: auto !important;
+  max-height: 340px;
+  overflow: hidden;
+}
+
+.news > div[style*="height:240px"] {
+  height: auto !important;
+  max-height: 300px;
+}
+
+.education-section {
+  margin-top: 1.25rem;
+  gap: 1.1rem;
+}
+
+.edu-entry {
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.edu-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.publications {
+  margin-top: 1.25rem;
+}
+
+.publications ol.bibliography li .col-sm-2.abbr {
+  padding-left: 0;
+  padding-right: 0.6rem;
+}
+
+.publications ol.bibliography li .col-sm-8 {
+  padding-left: 0.25rem;
+  padding-right: 0;
+}
+
+/* ==========================================================================
+   Final card layout pass
+   ========================================================================== */
+
+.container {
+  max-width: 820px;
+}
+
+.post {
+  background: #ffffff;
+  border: 1px solid #e4e8f2;
+  border-radius: 12px;
+  padding: 1.15rem 1.15rem;
+  box-shadow: 0 5px 18px rgba(30, 43, 80, 0.06);
+}
+
+.post + .post {
+  margin-top: 1.3rem;
+}
+
+.post-header {
+  border-bottom: 1px solid #e7ebf4;
+  padding-bottom: 0.7rem;
+  margin-bottom: 0.9rem;
+}
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+/* About / intro card spacing */
+.clearfix p {
+  margin-bottom: 0.9rem;
+}
+
+/* News block inside card */
+.news {
+  border: 1px solid #e3e8f5;
+  border-radius: 10px;
+  background: #fcfdff;
+  padding: 0.55rem 0.7rem !important;
+}
+
+.news .table-responsive {
+  padding-top: 0.25rem !important;
+}
+
+.news table th {
+  width: 112px;
+}
+
+.news table td {
+  line-height: 1.45;
+}
+
+.date-pill {
+  min-width: 88px;
+  text-align: center;
+}
+
+/* Publications cards */
+.publications h2.year {
+  margin-top: 1.5rem;
+  margin-bottom: -0.5rem;
+  color: #5b6ca6;
+}
+
+.publications ol.bibliography li {
+  margin-bottom: 0.9rem;
+  border: 1px solid #e3e8f4;
+  border-left: 4px solid #2f468f;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 0.72rem 0.8rem;
+}
+
+.publications ol.bibliography li .row {
+  align-items: flex-start;
+}
+
+.publications ol.bibliography li .abbr {
+  margin-bottom: 0;
+  padding-top: 0.15rem;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  border-radius: 999px;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.62rem;
+}
+
+.publications ol.bibliography li .title {
+  margin-bottom: 0.25rem;
+}
+
+.publications ol.bibliography li .author {
+  margin-bottom: 0.2rem;
+}
+
+.publications ol.bibliography li .periodical {
+  margin-bottom: 0.15rem;
+}
+
+/* Experience cards (nested entries) */
+.education-section {
+  gap: 0.8rem;
+}
+
+.edu-entry {
+  background: #fbfcff;
+  border: 1px solid #e5e9f3;
+  border-radius: 10px;
+  padding: 0.75rem 0.85rem;
+  gap: 0.95rem;
+  border-bottom: 1px solid #e5e9f3;
+}
+
+.edu-entry:last-child {
+  border-bottom: 1px solid #e5e9f3;
+}
+
+.edu-logo {
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
+}
+
+.edu-details h3 {
+  margin-bottom: 0.2rem;
+  line-height: 1.25;
+}
+
+.edu-details p {
+  margin: 0.2rem 0;
+  line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+  .post {
+    padding: 0.9rem 0.85rem;
+  }
+
+  .news table th {
+    width: 100px;
+  }
+
+  .edu-entry {
+    padding: 0.65rem 0.7rem;
+    gap: 0.7rem;
+  }
+
+  .edu-logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* ==========================================================================
+   Academic minimal override (remove e-commerce feel)
+   ========================================================================== */
+
+body {
+  background: #f6f7fa;
+}
+
+.post {
+  background: #fff;
+  border: 1px solid #e4e7ee;
+  border-radius: 6px;
+  box-shadow: none;
+  padding: 1rem 1.05rem;
+}
+
+.post + .post {
+  margin-top: 1rem;
+}
+
+.post-header {
+  border-bottom: 1px solid #e8ebf2;
+  padding-bottom: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.post-title {
+  font-size: clamp(1.6rem, 3.2vw, 2rem);
+  letter-spacing: 0;
+}
+
+.news {
+  border: 1px solid #e6e9f0;
+  border-radius: 6px;
+  background: #fff;
+  padding: 0.45rem 0.6rem !important;
+}
+
+.date-pill {
+  background: #eef1f7;
+  border: 1px solid #dfe4ef;
+  color: #3e4b6a;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  padding: 3px 10px;
+  min-width: 84px;
+}
+
+.publications ol.bibliography li {
+  border: 0;
+  border-left: 2px solid #cfd7ea;
+  border-bottom: 1px solid #e5e9f2;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0.45rem 0 0.85rem 0.85rem;
+  margin-bottom: 0.8rem;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  background: #2f468f;
+  border-radius: 999px;
+  font-size: 0.66rem;
+  padding: 0.16rem 0.56rem;
+}
+
+.publications ol.bibliography li .title {
+  font-size: 1rem;
+}
+
+.edu-entry {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid #d4dced;
+  border-radius: 0;
+  border-bottom: 1px solid #e4e8f1;
+  box-shadow: none;
+  padding: 0.35rem 0 0.85rem 0.8rem;
+  gap: 0.8rem;
+}
+
+.edu-logo {
+  border: 1px solid #e4e8f0;
+  border-radius: 6px;
+  background: #fff;
+  box-shadow: none;
+}
+
+.edu-details h3 {
+  color: #283860;
+  font-size: 1.02rem;
+}
+
+.navbar {
+  backdrop-filter: none;
+  background-color: #f6f7fa;
+}
+
+/* ==========================================================================
+   Width + vibrancy tuning
+   ========================================================================== */
+
+.container {
+  max-width: 980px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+body {
+  background: linear-gradient(180deg, #f3f5fb 0%, #f8faff 55%, #f5f7fd 100%);
+}
+
+.navbar {
+  background-color: rgba(243, 245, 251, 0.92);
+  border-bottom: 1px solid #d8dfef;
+}
+
+.post {
+  border: 1px solid #dbe3f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(35, 55, 110, 0.06);
+  padding: 1.05rem 1.15rem;
+}
+
+.post-title {
+  color: #21315d;
+}
+
+.news {
+  background: #f9fbff;
+  border-color: #dbe3f4;
+}
+
+.date-pill {
+  background: #e6edff;
+  border-color: #cdd9ff;
+  color: #223566;
+}
+
+.publications ol.bibliography li {
+  border-left: 3px solid #2f468f;
+  border-bottom: 1px solid #dfe6f4;
+  padding-left: 0.95rem;
+}
+
+.edu-entry {
+  border-left: 3px solid #3f59a2;
+  border-bottom: 1px solid #dfe5f3;
+  background: #fafcff;
+  border-radius: 8px;
+  padding: 0.6rem 0.7rem 0.75rem 0.8rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    max-width: 860px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+
+/* ==========================================================================
+   News refinement: separation + reusable badges/buttons
+   ========================================================================== */
+
+/* Clear visual separation from intro text block */
+.clearfix + .news {
+  margin-top: 1.1rem;
+  padding-top: 0.6rem !important;
+  border-top: 1px solid #d8deed;
+}
+
+.news {
+  background: #fbfcfe;
+  border: 1px solid #e4e7ef;
+}
+
+.news .table-responsive {
+  padding-top: 0.35rem !important;
+}
+
+.news table tr {
+  border-bottom: 1px solid #eceff5;
+}
+
+.news table tr:last-child {
+  border-bottom: none;
+}
+
+.news table td {
+  padding-top: 0.35rem;
+  padding-bottom: 0.55rem;
+}
+
+/* Base style for all links in news feed */
+.news table td a {
+  display: inline-block;
+  margin: 0 0.12rem 0.15rem 0;
+  padding: 0.08rem 0.46rem;
+  border-radius: 999px;
+  border: none;
+  background: #f4f6fa;
+  color: #35425f !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  line-height: 1.25;
+}
+
+.news table td a:hover {
+  background: #edf1f7;
+  border-color: #cfd6e4;
+  color: #2e3a53 !important;
+}
+
+/* Conference names (e.g., ACL'25, NAACL'25) become primary badges */
+.news table td a:has(b) {
+  background: #e7ebf4;
+  border-color: #d3dbe9;
+  color: #2f3a55 !important;
+  padding: 0.1rem 0.58rem;
+}
+
+.news table td a:has(b):hover {
+  background: #dde4f1;
+  border-color: #c3cde0;
+  color: #27334c !important;
+}
+
+.news table td a:has(b) b {
+  color: inherit;
+  font-weight: 700;
+}
+
+.news-sep {
+  color: #7b8599;
+  font-weight: 600;
+  margin: 0 0.2rem;
+}
+
+/* ==========================================================================
+   Section-specific color system (more variety, still academic)
+   ========================================================================== */
+
+/* Keep main cards neutral */
+.post {
+  background: #ffffff;
+  border-color: #d8e0ef;
+}
+
+/* News gets its own warm tone */
+.news {
+  background: #ffffff;
+  border: 1px solid #e3e8f2;
+}
+
+.news table tr {
+  border-bottom: none;
+}
+
+.date-pill {
+  background: #edf1f7;
+  border-color: #d8e0ed;
+  color: #3b4a62;
+}
+
+/* Base chip style in news */
+.news table td a {
+  background: #f6f2e9;
+  border-color: #e3d7be;
+  color: #4f4228 !important;
+  font-weight: 600;
+}
+
+.news table td a:hover {
+  background: #efe6d4;
+  border-color: #d9c8a7;
+  color: #3e331e !important;
+}
+
+/* Conference badges */
+.news table td a:has(b) {
+  background: rgba(120, 21, 70, 0.08);
+  border: 1px solid rgba(120, 21, 70, 0.22);
+  color: #7a1546 !important;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.1rem 0.62rem;
+}
+
+.news table td a:has(b):hover {
+  background: rgba(120, 21, 70, 0.14);
+  border-color: rgba(120, 21, 70, 0.30);
+  color: #65123a !important;
+}
+
+.news table td a.conf-badge {
+  background: rgba(120, 21, 70, 0.08) !important;
+  border: 1px solid rgba(120, 21, 70, 0.22) !important;
+  color: #7a1546 !important;
+  font-family: "Roboto Slab", Georgia, serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.news table td a.conf-badge:hover {
+  background: rgba(120, 21, 70, 0.14) !important;
+  border-color: rgba(120, 21, 70, 0.30) !important;
+  color: #65123a !important;
+}
+
+
+/* Paper / article links */
+.news table td a[href*="arxiv"]:not(.conf-badge),
+.news table td a[href*="aclanthology"]:not(.conf-badge),
+.news table td a[href*="ieeexplore"]:not(.conf-badge),
+.news table td a[href*="springer"]:not(.conf-badge),
+.news table td a[href*="lrec-conf"]:not(.conf-badge),
+.news table td a[href*="elsevier"]:not(.conf-badge) {
+  background: #e9f0ff;
+  border-color: #cdd9f5;
+  color: #2b4b88 !important;
+}
+
+/* Code links */
+.news table td a[href*="github"],
+.news table td a[href*="kaggle"] {
+  background: #e8f6ee;
+  border-color: #c6e7d3;
+  color: #215f3f !important;
+}
+
+/* Certificates / slides / reports */
+.news table td a[href*="certificate" i],
+.news table td a[href*="thesis" i],
+.news table td a[href*="slide" i],
+.news table td a[href*=".ppt" i] {
+  background: #fff2de;
+  border-color: #f0d7aa;
+  color: #7a5522 !important;
+}
+
+/* Publication and experience keep distinct cool accents */
+.publications ol.bibliography li {
+  background: #f8fbff;
+  border-bottom-color: #dae5f5;
+  border-left-color: #3a57a8;
+}
+
+.edu-entry {
+  background: #f7fbf8;
+  border-left-color: #3d7a67;
+  border-bottom-color: #d7e7df;
+}
+
+/* Date and inline keyword emphasis in news */
+.date-pill {
+  background: #eceff3;
+  border: 1px solid #d7dde6;
+  color: #3e4654;
+  font-weight: 700;
+  box-shadow: none;
+}
+
+.news table td span[style*="color:blue"],
+.news table td span[style*="color: blue"] {
+  color: #244b72 !important;
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* News block — no outer border; rows carry their own */
+.news {
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+
+.clearfix + .news {
+  border-top: none !important;
+}
+
+.about-page .clearfix + .news {
+  margin-top: 0.35rem !important;
+  padding-top: 0.2rem !important;
+}
+
+.about-page .news {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/* Override inline dashed header rule in news block */
+.news > div[style*="position: sticky"] {
+  border-bottom: none !important;
+  padding: 0.6rem 0 !important;
+}
+
+.news > div[style*="position: sticky"] h2 {
+  font-size: 1.95rem;
+  color: #1f2c49;
+}
+
+/* Full white page background per request */
+body {
+  background: #ffffff !important;
+}
+
+/* ==========================================================================
+   Original profile-page width and placement (match live site)
+   ========================================================================== */
+
+.container {
+  max-width: 800px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+body.fixed-top-nav {
+  padding-top: 56px !important;
+}
+
+.post {
+  background: #ffffff !important;
+  border: 1px solid #e4e9f3 !important;
+  box-shadow: 0 1px 4px rgba(29, 44, 88, 0.04) !important;
+  border-radius: 8px !important;
+  padding: 1rem 1.05rem !important;
+}
+
+/* About page should be flat (no card container) */
+.about-page .post {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+/* Intro text cleanup on About page */
+.about-page .clearfix span[style*="font-weight: 800"],
+.about-page .clearfix span[style*="font-weight: 600"],
+.about-page .clearfix b,
+.about-page .clearfix strong {
+  font-weight: 500 !important;
+}
+
+.about-page .clearfix a {
+  color: #2f5d86 !important;
+  font-weight: 600 !important;
+}
+
+.about-page .clearfix a:hover {
+  color: #244a6c !important;
+}
+
+.about-page .clearfix p:first-of-type a:hover {
+  background: #ecf9f6 !important;
+  color: #0f6a5b !important;
+  text-decoration-color: #0f6a5b !important;
+}
+
+.inline-section-heading {
+  font-family: inherit;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #26324b;
+}
+
+.post + .post {
+  margin-top: 1rem !important;
+}
+
+.profile {
+  margin-left: 1rem !important;
+  width: 100% !important;
+}
+
+@media (min-width: 576px) {
+  .profile {
+    width: 30% !important;
+  }
+}
+
+/* Individual bordered news rows */
+.news table {
+  border-collapse: separate !important;
+  border-spacing: 0 5px !important;
+}
+
+.news table tr {
+  border-bottom: none !important;
+}
+
+.news table tr th,
+.news table tr td {
+  background: #ffffff;
+  border-top: 1px solid #e5e8ef;
+  border-bottom: 1px solid #e5e8ef;
+  vertical-align: middle;
+}
+
+.news table tr th {
+  border-left: 1px solid #e5e8ef;
+  border-radius: 12px 0 0 12px;
+  padding: 0.2rem 0 0.2rem 0.5rem !important;
+}
+
+.news table tr td {
+  border-right: 1px solid #e5e8ef;
+  border-radius: 0 12px 12px 0;
+  padding: 0.15rem 0.5rem 0.2rem 0.1rem !important;
+  line-height: 1.38;
+}
+
+.news table td a {
+  margin-bottom: 0 !important;
+}
+
+.news .date-pill {
+  padding: 2px 10px !important;
+  line-height: 1.3;
+  font-size: 0.7rem;
+}
+
+/* Publications page — match About page flat style */
+.publications-page .post {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+}
+
+.publications-page .post-header {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.publications-page .publications ol.bibliography li {
+  background: transparent !important;
+  border: none !important;
+  border-left: none !important;
+  border-bottom: 1px solid #e2e7f2 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 0 0 0.85rem 0 !important;
+}
+
+.publications-page .publications ol.bibliography li:last-child {
+  border-bottom: none !important;
+}
+
+.research-areas {
+  margin-bottom: 0.75rem;
+}
+
+.research-areas-intro {
+  margin-bottom: 0.6rem;
+}
+
+.research-areas-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.research-tag {
+  display: inline-block;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  background: #eceff3;
+  border: 1px solid #d7dde6;
+  color: #3e4654;
+  font-size: 0.84rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.publication-note {
+  margin-top: 0;
+  margin-bottom: 1.1rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 1px solid #eef1f6;
+  font-size: 0.84rem;
+  color: #6b7385;
+}
+
+/* ==========================================================================
+   Publications page redesign (clean card system)
+   ========================================================================== */
+
+.publications-page .post-header {
+  margin-bottom: 0.95rem !important;
+}
+
+.publications-page .post-title {
+  color: #202f54;
+  margin-bottom: 0.25rem !important;
+}
+
+.publications-subtitle {
+  margin: 0;
+  color: #445472;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.publications-page .research-areas {
+  border: 1px solid #f4f6fb;
+  border-radius: 12px;
+  background: #f8faff;
+  padding: 0.8rem 0.9rem;
+  margin-bottom: 0.55rem;
+}
+
+.publications-page .research-areas-intro {
+  margin-bottom: 0.5rem;
+}
+
+.publications-page .research-tag {
+  background: #dfe8ff;
+  border: 1px solid #becdee;
+  color: #233f79;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.22rem 0.62rem;
+}
+
+.publications-page .publication-note {
+  margin-bottom: 1rem;
+  padding-bottom: 0.95rem;
+  border-bottom: 1px solid #e6ebf4;
+}
+
+.publications-page .publications h2.year {
+  margin: 1.35rem 0 0.72rem !important;
+  padding-top: 0 !important;
+  border-top: none !important;
+  text-align: left;
+  color: #314a7f;
+  font-size: clamp(1.28rem, 2.1vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border-left: 3px solid #4b64a8;
+  padding-left: 0.52rem;
+  text-shadow: 0 1px 1px rgba(33, 54, 97, 0.12);
+}
+
+
+.publications-page .publications ol.bibliography {
+  margin: 0 0 0.95rem 0 !important;
+  padding: 0.3rem 0.88rem !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: #fbfdfb !important;
+  box-shadow: none !important;
+}
+
+.publications-page .publications ol.bibliography li {
+  margin-bottom: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  padding: 0.72rem 0 !important;
+}
+
+.publications-page .publications ol.bibliography li + li {
+  border-top: 1px solid #f4f6fb;
+}
+
+.publications-page .publications ol.bibliography li .row {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  gap: 0.72rem;
+  align-items: start;
+  margin: 0 !important;
+}
+
+.publications-page .publications ol.bibliography li .col-sm-2.abbr,
+.publications-page .publications ol.bibliography li .col-sm-8 {
+  max-width: none;
+  flex: none;
+  width: auto;
+  padding: 0 !important;
+}
+
+.publications-page .publications ol.bibliography li .abbr {
+  margin: 0 !important;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.publications-page .publications ol.bibliography li .abbr .conf-badge-stack {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(0.22rem);
+}
+
+.publications-page .publications ol.bibliography li .abbr abbr {
+  display: inline-block;
+  min-width: 0;
+  text-align: center;
+  background: rgba(120, 21, 70, 0.08) !important;
+  border: 1px solid rgba(120, 21, 70, 0.22) !important;
+  color: #7a1546 !important;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  padding: 0.22rem 0.92rem;
+  box-shadow: inset 0 -1px 0 rgba(120, 21, 70, 0.1);
+}
+
+.publications-page .publications ol.bibliography li .abbr .conf-track-badge {
+  display: block;
+  margin-top: 0.3rem;
+  padding: 0.08rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid #d5dced;
+  background: #f7f9fd;
+  color: #4c5f84;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.publications-page .publications ol.bibliography li .abbr .journal-metrics-badge {
+  background: #eef3fb;
+  border-color: #d2ddee;
+  color: #435a82;
+  text-transform: none;
+  font-size: 0.6rem;
+}
+
+.publications-page .publications ol.bibliography li .abbr .preprint-pill {
+  margin-top: 0.12rem;
+  text-transform: none;
+  font-size: 0.62rem;
+  padding: 0.08rem 0.56rem;
+}
+
+.publications-page .publications ol.bibliography li .title {
+  margin-bottom: 0.2rem;
+  line-height: 1.35;
+  color: #2f3747 !important;
+  font-weight: 700 !important;
+}
+
+.publications-page .publications ol.bibliography li .title a {
+  color: inherit !important;
+  font-weight: inherit !important;
+  text-decoration: none !important;
+  pointer-events: none;
+  cursor: default;
+}
+
+.publications-page .publications ol.bibliography li .title a:hover {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.publications-page .publications ol.bibliography li .author {
+  color: #3f4f6f;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  margin-bottom: 0.1rem;
+}
+
+.publications-page .publications ol.bibliography li .author span[style*="#6610f2"] {
+  color: #4a5fa5 !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.publications-page .publications ol.bibliography li .periodical {
+  color: #4e6288;
+  font-size: 0.89rem;
+  display: none !important;
+}
+
+.publications-page .publications ol.bibliography li .periodical em {
+  color: #3e5279;
+}
+
+.publications-page .publications ol.bibliography li .links {
+  margin-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.22rem;
+  justify-content: flex-start;
+  margin-left: -2px;
+  padding-left: 0 !important;
+}
+
+.publications-page .publications ol.bibliography li .pub-action-btn {
+  display: inline-block;
+  padding: 0.08rem 0.46rem;
+  border: 1px solid #cfd8e8 !important;
+  border-radius: 999px;
+  background: #fafcff !important;
+  color: #2c3c60 !important;
+  font-size: 0.64rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: none !important;
+  text-decoration: none !important;
+  margin-right: 0;
+  box-shadow: none !important;
+}
+
+.publications-page .publications ol.bibliography li .pub-action-btn:hover {
+  background: #ecf9f6 !important;
+  border-color: #bfe5dc !important;
+  color: #0f6a5b !important;
+  box-shadow: none !important;
+}
+
+.publications-page .publications ol.bibliography li .pub-action-btn.code-placeholder {
+  opacity: 0.88;
+}
+
+.publications-page .publications ol.bibliography li .abstract.hidden {
+  display: none !important;
+  border: none !important;
+}
+
+@media (max-width: 700px) {
+  .publications-page .publications ol.bibliography {
+    padding: 0.22rem 0.45rem !important;
+  }
+
+  .publications-page .publications ol.bibliography li .row {
+    grid-template-columns: 1fr;
+    gap: 0.42rem;
+  }
+
+  .publications-page .publications ol.bibliography li .abbr {
+    margin-bottom: 0.2rem !important;
+  }
+
+  .publications-page .publications ol.bibliography li .abbr .conf-badge-stack {
+    transform: none;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .publications-page .publications ol.bibliography li .abbr .conf-track-badge {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .publications-page .publications ol.bibliography li .col-sm-8 {
+    margin-top: 0.12rem;
+  }
+
+  .publications-page .publications ol.bibliography li .abbr abbr {
+    min-width: 0;
+  }
+
+  .publications-page .publications ol.bibliography li .title {
+    font-size: 0.94rem;
+    line-height: 1.32;
+  }
+
+  .publications-page .publications ol.bibliography li .author {
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+
+  .publications-page .publications ol.bibliography li .links {
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 0.28rem;
+  }
+}
+
+/* ==========================================================================
+   Experience page polish
+   ========================================================================== */
+
+.experience-page .edu-details h3 {
+  color: #334f8c !important;
+}
+
+.experience-page .post,
+.experience-page .edu-entry,
+.experience-page .edu-details,
+.experience-page .edu-details h3,
+.experience-page .edu-details p,
+.experience-page .edu-details a,
+.experience-page .edu-details .position,
+.experience-page .edu-details .date {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.experience-page .edu-details .date {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+}
+
+.experience-page .edu-details .position {
+  white-space: nowrap;
+}
+
+.experience-page .post {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+}
+
+.experience-page .edu-entry {
+  border: 1px solid #e8edf5 !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  border-radius: 10px !important;
+  background: #fbfdfb !important;
+  box-shadow: none !important;
+  padding: 0.65rem 0.75rem 0.85rem 0.8rem !important;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.experience-page .edu-entry:last-child {
+  border-bottom: none !important;
+}
+
+.experience-page .edu-logo {
+  border: 1px solid #e6ebf3;
+  box-shadow: none !important;
+}
+
+.experience-page .edu-details a:hover {
+  background: #ecf9f6 !important;
+  color: #0f6a5b !important;
+  text-decoration-color: #0f6a5b !important;
+}
+
+.experience-page .edu-details .date::before {
+  content: "[";
+  margin-right: 0.15rem;
+}
+
+.experience-page .edu-details .date::after {
+  content: "]";
+  margin-left: 0.15rem;
+}
+
+@media (max-width: 700px) {
+  .experience-page .edu-details .position {
+    white-space: normal;
+  }
+
+  .experience-page .edu-details .date {
+    white-space: nowrap;
+  }
+}
+
+/* ==========================================================================
+   Miscellaneous page redesign
+   ========================================================================== */
+
+.misc-page .misc-shell {
+  background: transparent !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  padding: 0 0.35rem !important;
+}
+
+.misc-page .post-header {
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0.8rem !important;
+}
+
+.misc-page .post-title {
+  color: #22345f;
+}
+
+.misc-page .misc-section {
+  margin-top: 1rem;
+  padding: 0.25rem 0.35rem 1rem;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: none !important;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+}
+
+.misc-page .misc-title {
+  margin: 0 0 0.35rem;
+  font-size: 1.35rem;
+  color: #2a3f73;
+}
+
+.misc-page .misc-section-header {
+  margin-bottom: 0.8rem !important;
+  border: none !important;
+  border-top: none !important;
+  border-bottom: 1px solid #e8ebf2 !important;
+  padding-bottom: 0.55rem !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.misc-page .misc-section-title {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: clamp(1.6rem, 3.2vw, 2rem);
+  line-height: 1.2;
+}
+
+.misc-page .misc-intro {
+  margin-bottom: 0.8rem;
+  color: #4d5f83;
+  line-height: 1.6;
+}
+
+.misc-page .misc-year-block {
+  margin-top: 0.8rem;
+}
+
+.misc-page .misc-year-block h3 {
+  margin-bottom: 0.28rem;
+  font-size: 1.03rem;
+  color: #314d88;
+}
+
+.misc-page .misc-section ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.misc-page .misc-section li {
+  margin-bottom: 0.32rem;
+  color: #2f3f60;
+  line-height: 1.5;
+}
+
+.misc-page .misc-section li:last-child {
+  margin-bottom: 0;
+}
+
+.misc-page .awards-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.misc-page .awards-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.misc-page .awards-row.single-award {
+  align-items: center;
+}
+
+.misc-page .awards-row.single-award .teaching-term {
+  align-self: center;
+}
+
+.misc-page .award-chip {
+  display: inline;
+  font-weight: 700;
+  color: #243550;
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  margin-right: 0.2rem;
+  line-height: 1.2;
+  font-size: 0.98rem;
+  vertical-align: baseline;
+}
+
+.misc-page .status-chip {
+  display: inline-block;
+  padding: 0.05rem 0.45rem;
+  border-radius: 999px;
+  background: #eef1f5;
+  color: #4a505b;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.15;
+  vertical-align: middle;
+}
+
+.misc-page .service-subsection {
+  margin-top: 1rem;
+  padding: 0.45rem 0 0.7rem;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none !important;
+}
+
+.misc-page .service-subsection:first-of-type {
+  margin-top: 0.65rem;
+}
+
+.misc-page .service-subtitle {
+  margin: 0 0 0.75rem;
+  padding-left: 0;
+  border-left: none;
+  font-size: 1.02rem;
+  color: #334f8c;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.misc-page .service-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.misc-page .service-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.misc-page .service-row.single-service {
+  align-items: center;
+}
+
+.misc-page .service-row.single-service .teaching-term {
+  align-self: center;
+}
+
+.misc-page .advising-rows .teaching-course-list {
+  gap: 0.32rem;
+}
+
+.misc-page .service-list li strong {
+  color: #3e4b73;
+}
+
+.misc-page .service-subsection.emphasis-strong .teaching-course strong {
+  font-weight: 700;
+  color: #243550;
+  font-size: 0.98rem;
+}
+
+.misc-page .service-acronym {
+  color: #3e4b73;
+  font-weight: 700;
+}
+
+.misc-page .service-link-chip {
+  display: inline-block;
+  margin-left: 0.32rem;
+  padding: 0.06rem 0.5rem;
+  border-radius: 999px;
+  background: #f5ebd8;
+  color: #7a5522 !important;
+  text-decoration: none !important;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.misc-page .service-link-chip:hover {
+  background: #ecf9f6;
+  color: #0b5f52 !important;
+  text-decoration: none !important;
+}
+
+.misc-page .certification-list .cert-title {
+  font-weight: 600;
+  color: #2f3747;
+}
+
+.misc-page .misc-section a {
+  color: #7a5522;
+  text-decoration: none;
+}
+
+.misc-page .teaching-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.misc-page .teaching-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.9rem;
+  align-items: start;
+}
+
+.misc-page .teaching-term {
+  display: inline-block;
+  width: fit-content;
+  min-width: 0;
+  text-align: center;
+  border-radius: 999px;
+  background: #eef1f5;
+  color: #4a505b;
+  font-size: 0.86rem;
+  font-weight: 600;
+  padding: 0.12rem 0.72rem;
+  line-height: 1.15;
+  white-space: nowrap;
+  align-self: start;
+  margin-top: 0.12rem;
+}
+
+.misc-page .teaching-course {
+  color: #2f3747;
+  font-size: 1rem;
+  line-height: 1.35;
+  font-weight: 400;
+}
+
+.misc-page .teaching-course-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.misc-page .teaching-row.single-course {
+  align-items: center;
+}
+
+.misc-page .teaching-row.single-course .teaching-term {
+  align-self: center;
+}
+
+.misc-page .teaching-course a {
+  margin-left: 0.4rem;
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 0.08rem 0.55rem;
+  border-radius: 999px;
+  background: #f5ebd8;
+  border: none;
+  color: #7a5522 !important;
+  text-decoration: none !important;
+  line-height: 1.2;
+}
+
+.misc-page .teaching-course a:hover {
+  background: #ecf9f6;
+  color: #0b5f52 !important;
+  text-decoration: none !important;
+}
+
+.misc-page .misc-section a:hover {
+  background: #ecf9f6;
+  color: #0b5f52 !important;
+  text-decoration: none !important;
+}
+
+@media (max-width: 700px) {
+  .misc-page .teaching-row {
+    grid-template-columns: auto 1fr;
+    gap: 0.7rem;
+  }
+
+  .misc-page .teaching-term {
+    min-width: 0;
+  }
+
+}
