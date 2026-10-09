@@ -1520,6 +1520,194 @@ body.fixed-top-nav {
   }
 }
 
+/* Research page refresh */
+.publications-page .post {
+  padding: 2.15rem clamp(1rem, 4vw, 2.75rem) 2.75rem;
+}
+
+.publications-page .post-header {
+  border-bottom: 0;
+  margin-bottom: 1.9rem;
+  padding-bottom: 0;
+}
+
+.publications-page .post-title {
+  color: #202b52;
+  font-size: clamp(2.15rem, 5vw, 3.2rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 1;
+}
+
+.publications-page .publications-subtitle {
+  max-width: 680px;
+  margin: 0.9rem 0 0;
+  color: #5e6980;
+  font-size: 1.02rem;
+  line-height: 1.7;
+}
+
+.publications-page .research-areas {
+  margin: 0 0 2.1rem;
+  padding: 1.2rem 1.3rem 1.35rem;
+  border: 1px solid #dfe5f2;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8faff, #f2f5fc);
+}
+
+.publications-page .research-areas-intro {
+  margin-bottom: 0.8rem;
+}
+
+.publications-page .inline-section-heading {
+  color: #26345f;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.publications-page .research-areas-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.publications-page .research-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2rem;
+  padding: 0.35rem 0.78rem;
+  border: 1px solid #d7deee;
+  border-radius: 999px;
+  background: #fff;
+  color: #3b4b78;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.publications-page .publication-note {
+  margin: 0 0 1.55rem;
+  color: #7b8495;
+  font-size: 0.78rem;
+}
+
+.publications-page .publications h2.year {
+  position: relative;
+  margin: 2.35rem 0 1rem;
+  padding: 0 0 0.5rem;
+  border-top: 0;
+  border-bottom: 1px solid #dfe5f0;
+  color: #273661;
+  font-size: 1.25rem;
+  font-weight: 750;
+  letter-spacing: -0.015em;
+  text-align: left;
+}
+
+.publications-page .publications h2.year::after {
+  display: block;
+  width: 2.8rem;
+  height: 3px;
+  margin-top: 0.5rem;
+  border-radius: 999px;
+  background: #6677bd;
+  content: "";
+}
+
+.publications-page .publications ol.bibliography li {
+  margin-bottom: 0.8rem;
+  padding: 1rem 0 1.1rem;
+  border: 0;
+  border-bottom: 1px solid #e8ebf2;
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  transition: border-color 160ms ease, padding-left 160ms ease, background 160ms ease;
+}
+
+.publications-page .publications ol.bibliography li:hover {
+  padding-left: 0.75rem;
+  border-left-color: #6677bd;
+  background: #fafbff;
+}
+
+.publications-page .publications ol.bibliography li .title {
+  color: #202b52;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.publications-page .publications ol.bibliography li .title a {
+  color: inherit;
+}
+
+.publications-page .publications ol.bibliography li .author {
+  color: #59647a;
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.publications-page .publications ol.bibliography li .periodical {
+  color: #7d8799;
+  font-size: 0.82rem;
+  line-height: 1.45;
+}
+
+.publications-page .publications ol.bibliography li .abbr abbr,
+.publications-page .publications .conf-track-badge {
+  background: #e9edfb;
+  color: #3f4f8e;
+  font-weight: 800;
+}
+
+.publications-page .publications ol.bibliography li .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 0.55rem;
+}
+
+.publications-page .publications ol.bibliography li .links a.btn {
+  margin: 0;
+  border: 1px solid #cbd4ec;
+  border-radius: 999px;
+  color: #3c4b83;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  padding: 0.3rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.publications-page .publications ol.bibliography li .links a.btn:hover {
+  border-color: #5265aa;
+  background: #eef1fc;
+  color: #293b78;
+  text-decoration: none;
+}
+
+@media (max-width: 575px) {
+  .publications-page .post {
+    padding: 1.5rem 0.9rem 2rem;
+  }
+
+  .publications-page .publications ol.bibliography li .row {
+    display: block;
+  }
+
+  .publications-page .publications ol.bibliography li .abbr {
+    height: auto;
+    margin-bottom: 0.55rem;
+  }
+
+  .publications-page .publications ol.bibliography li .col-sm-8 {
+    width: 100%;
+  }
+}
+
 /* ==========================================================================
    Experience page polish
    ========================================================================== */
